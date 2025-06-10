@@ -114,50 +114,35 @@ export default function Portfolio() {
 
   return (
     <main className="portfolio-header">
-      <section className="intro-header">
-        <h1 className="name-heading">Kenny F. Hector</h1>
-        <p className="subtitle">
-          Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB
-        </p>
-        <div className="contact-links">
-          <a href="mailto:kennyhector24@gmail.com">kennyhector24@gmail.com</a>
-          {" | "}
-          <a href="https://github.com/khector24" target="_blank">
-            GitHub
-          </a>
-        </div>
+      <div className="filter-dropdown">
+        <button
+          className="filter-toggle"
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
+          Filter by Tech ▾
+        </button>
 
-        <div className="filter-dropdown">
-          <button
-            className="filter-toggle"
-            onClick={() => setShowDropdown(!showDropdown)}
-          >
-            Filter by Tech ▾
-          </button>
-
-          {showDropdown && (
-            <div className="filter-options">
-              {availableTags.map((tag) => (
-                <label key={tag} className="filter-option">
-                  <input
-                    type="checkbox"
-                    checked={selectedTags.includes(tag)}
-                    onChange={() => toggleTag(tag)}
-                  />
-                  {tag.toUpperCase()}
-                </label>
-              ))}
-              <button
-                className="clear-filter-btn"
-                onClick={() => setSelectedTags([])}
-              >
-                Clear All Filters
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
-
+        {showDropdown && (
+          <div className="filter-options">
+            {availableTags.map((tag) => (
+              <label key={tag} className="filter-option">
+                <input
+                  type="checkbox"
+                  checked={selectedTags.includes(tag)}
+                  onChange={() => toggleTag(tag)}
+                />
+                {tag.toUpperCase()}
+              </label>
+            ))}
+            <button
+              className="clear-filter-btn"
+              onClick={() => setSelectedTags([])}
+            >
+              Clear All Filters
+            </button>
+          </div>
+        )}
+      </div>
       <section className="projects-grid">
         {filteredProjects.map((proj, i) => (
           <div key={i} className="project-card">
