@@ -126,6 +126,59 @@ h2 {
   margin-top: 2rem;
 }
 
+/* === Home Layout === */
+.home-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d1d5db;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.skills-section {
+  margin-top: 3rem;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-text {
+    align-items: center;
+  }
+}
+
 /* === Portfolio Page === */
 .portfolio-header {
   max-width: 1024px;
