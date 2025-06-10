@@ -179,6 +179,39 @@ h2 {
   }
 }
 
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home-hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
 /* === Portfolio Page === */
 .portfolio-header {
   max-width: 1024px;
