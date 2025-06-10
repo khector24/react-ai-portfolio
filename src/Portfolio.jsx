@@ -1,3 +1,6 @@
+import { useState } from "react";
+import "./App.css";
+
 const projects = [
   {
     title: "Splash Zone Aquatics Website",
@@ -81,16 +84,27 @@ const projects = [
   },
 ];
 
-export default function Portfolio({ filter = null }) {
-  const filteredProjects = filter
-    ? projects.filter((proj) =>
-        proj.tech.toLowerCase().includes(filter.toLowerCase())
-      )
-    : projects;
+export default function Portfolio() {
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  const handleTagChange = (e) => {
+    const { options } = e.target;
+    const values = Array.from(options)
+      .filter((o) => o.selected)
+      .map((o) => o.value);
+    setSelectedTags(values);
+  };
+
+  const filteredProjects =
+    selectedTags.length > 0
+      ? projects.filter((proj) =>
+          selectedTags.every((tag) => proj.tags.includes(tag))
+        )
+      : projects;
 
   return (
     <main className="portfolio-header">
-      <section className="max-w-4xl mx-auto text-center">
+      <section className="max-w-4xl mx-auto text-left">
         <h1 className="text-4xl font-bold mb-2">Kenny F. Hector</h1>
         <p className="text-lg mb-6">
           Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB
@@ -111,24 +125,29 @@ export default function Portfolio({ filter = null }) {
             GitHub
           </a>
         </div>
-        <div className="filter-buttons">
-          {[
-            "react",
-            "node",
-            "javascript",
-            "aws",
-            "ejs",
-            "html",
-            "css",
-            "api",
-          ].map((tag) => (
-            <button
-              key={tag}
-              onClick={() => (window.location.href = `/?filter=${tag}`)}
-            >
-              {tag.toUpperCase()}
-            </button>
-          ))}
+        <div className="dropdown-filter">
+          <label htmlFor="tech-select">Filter by tech:</label>
+          <select
+            id="tech-select"
+            multiple
+            value={selectedTags}
+            onChange={handleTagChange}
+          >
+            {[
+              "react",
+              "node",
+              "javascript",
+              "aws",
+              "ejs",
+              "html",
+              "css",
+              "api",
+            ].map((tag) => (
+              <option key={tag} value={tag}>
+                {tag.toUpperCase()}
+              </option>
+            ))}
+          </select>
         </div>
       </section>
 
