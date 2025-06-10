@@ -84,15 +84,25 @@ const projects = [
   },
 ];
 
+const availableTags = [
+  "react",
+  "node",
+  "javascript",
+  "aws",
+  "ejs",
+  "html",
+  "css",
+  "api",
+];
+
 export default function Portfolio() {
   const [selectedTags, setSelectedTags] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  const handleTagChange = (e) => {
-    const { options } = e.target;
-    const values = Array.from(options)
-      .filter((o) => o.selected)
-      .map((o) => o.value);
-    setSelectedTags(values);
+  const toggleTag = (tag) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
   };
 
   const filteredProjects =
@@ -104,50 +114,40 @@ export default function Portfolio() {
 
   return (
     <main className="portfolio-header">
-      <section className="max-w-4xl mx-auto text-left">
-        <h1 className="text-4xl font-bold mb-2">Kenny F. Hector</h1>
-        <p className="text-lg mb-6">
+      <section className="intro-header">
+        <h1 className="name-heading">Kenny F. Hector</h1>
+        <p className="subtitle">
           Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB
         </p>
-        <div className="mb-4">
-          <a
-            href="mailto:kennyhector24@gmail.com"
-            className="text-blue-500 hover:underline"
-          >
-            kennyhector24@gmail.com
-          </a>
+        <div className="contact-links">
+          <a href="mailto:kennyhector24@gmail.com">kennyhector24@gmail.com</a>
           {" | "}
-          <a
-            href="https://github.com/khector24"
-            className="text-blue-500 hover:underline"
-            target="_blank"
-          >
+          <a href="https://github.com/khector24" target="_blank">
             GitHub
           </a>
         </div>
-        <div className="dropdown-filter">
-          <label htmlFor="tech-select">Filter by tech:</label>
-          <select
-            id="tech-select"
-            multiple
-            value={selectedTags}
-            onChange={handleTagChange}
+
+        <div className="filter-dropdown">
+          <button
+            className="filter-toggle"
+            onClick={() => setShowDropdown(!showDropdown)}
           >
-            {[
-              "react",
-              "node",
-              "javascript",
-              "aws",
-              "ejs",
-              "html",
-              "css",
-              "api",
-            ].map((tag) => (
-              <option key={tag} value={tag}>
-                {tag.toUpperCase()}
-              </option>
-            ))}
-          </select>
+            Filter by Tech ▾
+          </button>
+          {showDropdown && (
+            <div className="filter-options">
+              {availableTags.map((tag) => (
+                <label key={tag} className="filter-option">
+                  <input
+                    type="checkbox"
+                    checked={selectedTags.includes(tag)}
+                    onChange={() => toggleTag(tag)}
+                  />
+                  {tag.toUpperCase()}
+                </label>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -157,12 +157,7 @@ export default function Portfolio() {
             <h3 className="project-title">{proj.title}</h3>
             <p className="project-tech">{proj.tech}</p>
             <p className="project-desc">{proj.description}</p>
-            <a
-              href={proj.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-btn"
-            >
+            <a href={proj.link} target="_blank" className="github-btn">
               View on GitHub
             </a>
           </div>
