@@ -1,0 +1,272 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+  color: #111827;
+}
+
+main {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+section {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #111827;
+}
+
+.project-tech {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.github-btn {
+  display: inline-block;
+  background-color: #111827;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.github-btn:hover {
+  background-color: #1f2937;
+}
+
+nav {
+  background-color: #f8fafc;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav a {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+  border-radius: 0.375rem;
+}
+
+nav a:hover {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1d4ed8;
+}
+
+.filter-buttons {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter-buttons button {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #bae6fd;
+}
+
+.portfolio-header {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  background-color: #f1f5f9;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
