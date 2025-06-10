@@ -125,26 +125,6 @@ a:hover {
   background-color: #1f2937;
 }
 
-nav {
-  background-color: #f8fafc;
-  padding: 1rem 2rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: flex-start;
-  gap: 1rem;
-}
-
-nav {
-  background-color: #ffffff;
-  padding: 1rem 2rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 1rem;
-  border-bottom: 1px solid #e5e7eb;
-}
-
 nav a {
   color: #3b82f6;
   font-weight: 500;
@@ -170,11 +150,17 @@ nav a:hover {
 }
 
 .nav-left {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.nav-right {
   display: flex;
   gap: 1.5rem;
 }
 
-.nav-left a {
+.nav-right a {
   color: #3b82f6;
   font-weight: 500;
   text-decoration: none;
@@ -183,15 +169,9 @@ nav a:hover {
   transition: all 0.2s ease;
 }
 
-.nav-left a:hover {
+.nav-right a:hover {
   background-color: #eff6ff;
   color: #1d4ed8;
-}
-
-.nav-right {
-  font-weight: bold;
-  color: #111827;
-  font-size: 1rem;
 }
 
 .home-buttons {
