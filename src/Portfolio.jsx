@@ -134,6 +134,7 @@ export default function Portfolio() {
           >
             Filter by Tech ▾
           </button>
+
           {showDropdown && (
             <div className="filter-options">
               {availableTags.map((tag) => (
@@ -146,6 +147,12 @@ export default function Portfolio() {
                   {tag.toUpperCase()}
                 </label>
               ))}
+              <button
+                className="clear-filter-btn"
+                onClick={() => setSelectedTags([])}
+              >
+                Clear All Filters
+              </button>
             </div>
           )}
         </div>

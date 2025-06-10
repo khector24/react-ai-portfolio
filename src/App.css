@@ -314,45 +314,41 @@ nav a:hover {
   color: #111827;
 }
 
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Only show modal-style dropdown on mobile */
+@media (max-width: 640px) {
+  .filter-options {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 320px;
+    background-color: white;
+    padding: 1.5rem;
+    z-index: 9999;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   }
-  to {
-    transform: rotate(360deg);
+
+  .filter-toggle {
+    width: 100%;
+    text-align: center;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Clear Filters button */
+.clear-filter-btn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #f87171;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+.clear-filter-btn:hover {
+  background-color: #ef4444;
 }
-
-.read-the-docs {
-  color: #888;
-} */
