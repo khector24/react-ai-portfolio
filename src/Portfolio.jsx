@@ -1,32 +1,3 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import ContactForm from "./ContactForm";
-import Testimonials from "./Testimonials";
-
-// const projects = [
-//   {
-//     title: "Splash Zone Aquatics Website",
-//     tech: "React, Material UI, AWS S3, Lambda, DynamoDB",
-//     description:
-//       "Responsive, customer-centric website with dynamic sections and AWS backend. Resulted in 13 early signups.",
-//     link: "https://github.com/khector24/splash-zone-aquatics",
-//   },
-//   {
-//     title: "Theft Tracker Application",
-//     tech: "React, Material UI, AWS S3, Lambda, DynamoDB",
-//     description:
-//       "Dynamic theft reporting with file upload, AWS integration, and real-time updates. 33% faster police reporting.",
-//     link: "https://github.com/khector24/theft-tracker",
-//   },
-//   {
-//     title: "Delivery Management App",
-//     tech: "React, Node.js, Express, DynamoDB",
-//     description:
-//       "Full-stack delivery platform with auth, real-time tracking, and alerts. Reduced delivery errors to near-zero.",
-//     link: "https://github.com/khector24/delivery-manager",
-//   },
-// ];
-
 const projects = [
   {
     title: "Splash Zone Aquatics Website",
@@ -140,20 +111,6 @@ export default function Portfolio({ filter = null }) {
             GitHub
           </a>
         </div>
-        {/* <div className="mb-6">
-          <button
-            onClick={() => (window.location.href = "/?filter=react")}
-            className="bg-blue-500 text-white px-4 py-2 rounded mr-2"
-          >
-            React Projects
-          </button>
-          <button
-            onClick={() => (window.location.href = "/")}
-            className="bg-gray-500 text-white px-4 py-2 rounded"
-          >
-            All Projects
-          </button>
-        </div> */}
         <div className="filter-buttons">
           {[
             "react",
