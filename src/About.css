@@ -1,5 +1,4 @@
-/* === About Page Styles === */
-
+/* === About Page Container === */
 .about-container {
   max-width: 900px;
   margin: 0 auto;
@@ -39,7 +38,7 @@
   text-align: center;
 }
 
-/* === Skills & Achievements === */
+/* === Achievements & Skills Sections === */
 .skills-section,
 .achievements-section {
   margin-top: 3rem;
@@ -49,7 +48,6 @@
 .skill-list {
   list-style: none;
   padding-left: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
@@ -67,7 +65,7 @@
   left: 0;
 }
 
-/* === Skill Card Grouping === */
+/* === Skill Cards === */
 .skill-category {
   padding: 2rem;
   border-radius: 0.75rem;
@@ -83,7 +81,7 @@
   padding-left: 0.75rem;
 }
 
-/* === Light Theme === */
+/* === Theme: Light === */
 body[data-theme="light"] .about-container {
   background-color: #f9fafb;
   color: #1f2937;
@@ -113,7 +111,7 @@ body[data-theme="light"] .skill-list li:hover {
   background-color: #e0e7ff;
 }
 
-/* === Dark Theme === */
+/* === Theme: Dark === */
 body[data-theme="dark"] .about-container {
   background-color: #1f2937;
   color: #f9fafb;
