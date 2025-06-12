@@ -140,3 +140,52 @@ body[data-theme="dark"] .skill-list li {
 body[data-theme="dark"] .skill-list li:hover {
   background-color: #475569;
 }
+
+/* === FAQ Accordion === */
+.faq-section {
+  margin-top: 3rem;
+}
+
+.accordion-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.accordion-title {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+/* === Dark Theme Accordion === */
+body[data-theme="dark"] .accordion-item {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+body[data-theme="dark"] .accordion-title {
+  color: #f9fafb;
+}
+
+body[data-theme="dark"] .accordion-content {
+  background-color: #111827;
+  color: #e5e7eb;
+}

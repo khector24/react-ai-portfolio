@@ -1,5 +1,7 @@
 import resumePDF from "./assets/Best Resume - KFH.pdf";
 import "./About.css";
+import Accordion from "./Accordion"; // Assuming you have an Accordion component
+import faqs from "./assets/faqs";
 
 export default function About() {
   return (
@@ -102,6 +104,12 @@ export default function About() {
             <li>Project Management & Delivery</li>
           </ul>
         </div>
+      </section>
+      <section className="faq-section">
+        <h2>FAQs</h2>
+        {faqs.map((faq, idx) => (
+          <Accordion key={idx} title={faq.question} content={faq.answer} />
+        ))}
       </section>
     </main>
   );
