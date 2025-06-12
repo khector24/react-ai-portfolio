@@ -1,4 +1,6 @@
 /* === Portfolio Page === */
+
+/* === Portfolio Header === */
 .portfolio-header {
   max-width: 1024px;
   margin: 0 auto;
@@ -6,6 +8,7 @@
   padding: 2rem 1rem;
 }
 
+/* === Projects Grid === */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -19,6 +22,7 @@
   }
 }
 
+/* === Project Card === */
 .project-card {
   background-color: white;
   border-radius: 0.75rem;
@@ -137,4 +141,45 @@
     width: 100%;
     text-align: center;
   }
+}
+
+/* === Dark Theme === */
+body[data-theme="dark"] .project-card {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+body[data-theme="dark"] .project-title {
+  color: #f9fafb;
+}
+
+body[data-theme="dark"] .project-tech,
+body[data-theme="dark"] .project-desc {
+  color: #cbd5e1;
+}
+
+body[data-theme="dark"] .github-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+body[data-theme="dark"] .github-btn:hover {
+  background-color: #2563eb;
+}
+
+body[data-theme="dark"] .filter-options {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+body[data-theme="dark"] .filter-option {
+  color: #e5e7eb;
+}
+
+body[data-theme="dark"] .clear-filter-btn {
+  background-color: #ef4444;
+}
+
+body[data-theme="dark"] .clear-filter-btn:hover {
+  background-color: #dc2626;
 }
