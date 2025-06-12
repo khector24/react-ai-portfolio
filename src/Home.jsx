@@ -1,9 +1,31 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import profilePic from "./assets/profile-pic.jpeg";
 import "./Home.css";
 import resumePDF from "./assets/Best Resume - KFH.pdf";
 
 export default function Home() {
+  const [zenQuote, setZenQuote] = useState(
+    "Zen mode: Activated. No bugs, only features."
+  );
+
+  useEffect(() => {
+    async function fetchZenQuote() {
+      try {
+        const res = await axios.get("https://zenquotes.io/api/random");
+        if (res.data && res.data[0]) {
+          const { q, a } = res.data[0];
+          setZenQuote(`"${q}" - ${a}`);
+        }
+      } catch (error) {
+        console.error("Failed to fetch Zen quote:", error);
+      }
+    }
+
+    fetchZenQuote();
+  }, []);
+
   return (
     <main className="home-hero">
       <section className="home-hero-content">
@@ -36,11 +58,10 @@ export default function Home() {
             </a>
           </div>
 
-          <p className="zen-joke">
-            "Zen mode: Activated. No bugs, only features."
-          </p>
+          <p className="zen-joke">{zenQuote}</p>
         </div>
       </section>
+
       <section className="home-hero-quote">
         <p>"The best way to predict the future is to invent it." - Alan Kay</p>
       </section>
