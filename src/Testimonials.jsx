@@ -1,4 +1,5 @@
 import React from "react";
+import "./Testimonials.css"; // Assuming you have a CSS file for styling
 
 export default function Testimonials() {
   return (

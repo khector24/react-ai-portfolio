@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import profilePic from "./assets/profile-pic.jpeg";
 import "./App.css";
+import resumePDF from "./assets/Best Resume - KFH.pdf";
 
 export default function Home() {
   return (
@@ -30,27 +31,18 @@ export default function Home() {
             <Link to="/contact" className="cta-button">
               Contact Me
             </Link>
+            <a href={resumePDF} download className="cta-button">
+              Download Resume
+            </a>
           </div>
+
           <p className="zen-joke">
             "Zen mode: Activated. No bugs, only features."
           </p>
         </div>
       </section>
-
-      <section className="skills-section">
-        <h2>Skills</h2>
-        <ul className="skills-list">
-          <li>React (Hooks, Router, Vite)</li>
-          <li>Node.js & Express</li>
-          <li>AWS (Lambda, DynamoDB, S3, SES)</li>
-          <li>API Development & Integration</li>
-          <li>Python (Scripting, Automation)</li>
-          <li>MongoDB & SQL</li>
-          <li>HTML5 & CSS3</li>
-          <li>Responsive Design & Flexbox/Grid</li>
-          <li>Git & GitHub (Branching, Merging)</li>
-          <li>Agile Collaboration</li>
-        </ul>
+      <section className="home-hero-quote">
+        <p>"The best way to predict the future is to invent it." - Alan Kay</p>
       </section>
     </main>
   );
