@@ -1,5 +1,5 @@
 import resumePDF from "./assets/Best Resume - KFH.pdf";
-import "./App.css";
+import "./About.css";
 
 export default function About() {
   return (
@@ -18,6 +18,17 @@ export default function About() {
         deploying scalable cloud apps for client engagement. I'm AWS certified
         and fluent in React, Node.js, and automation tooling—equipped for both
         frontend finesse and backend logic.
+      </p>
+      <p>
+        When I'm not coding, you can find me exploring new tech trends, hiking,
+        or enjoying a good book. I believe in continuous learning and am always
+        looking for ways to improve my skills and contribute to exciting
+        projects.
+      </p>
+      <p>
+        Let's connect and build something amazing together! Feel free to reach
+        out via email at:{" "}
+        <a href="mailto:kennyhector24@gmail.com">kennyhector24@gmail.com</a>
       </p>
 
       <a href={resumePDF} download className="resume-button">
