@@ -5,25 +5,20 @@
   margin: 0 auto;
   padding: 3rem 1rem;
   line-height: 1.7;
-  color: #1f2937;
-  background-color: #f9fafb;
 }
 
 .about-container h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #111827;
 }
 
 .about-container p {
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
-  color: #374151;
 }
 
 .about-container a {
-  color: #2563eb;
   font-weight: 500;
   text-decoration: none;
 }
@@ -35,73 +30,48 @@
 /* === Resume Button === */
 .resume-button {
   display: inline-block;
-  margin: 2rem 0;
-  background-color: #2563eb;
-  color: white !important;
+  margin-top: 1.5rem;
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
   font-weight: 600;
+  padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
-  text-decoration: none;
   transition: background-color 0.2s ease;
   text-align: center;
-  border: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.resume-button:hover {
-  background-color: #1d4ed8;
-}
-
-/* === Achievements Section === */
+/* === Skills & Achievements === */
+.skills-section,
 .achievements-section {
   margin-top: 3rem;
 }
 
-.achievements-section h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #111827;
-}
-
-.achievements-list {
-  list-style-type: none;
+.achievements-list,
+.skill-list {
+  list-style: none;
   padding-left: 0;
   margin: 0;
-  color: #374151;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
 }
 
 .achievements-list li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.75rem;
   position: relative;
+  padding-left: 1.5rem;
   font-size: 1.05rem;
-  line-height: 1.6;
 }
 
 .achievements-list li::before {
   content: "✔";
-  color: #2563eb;
   position: absolute;
   left: 0;
-  font-weight: bold;
 }
 
-/* === Skills Section Layout === */
-.skills-section {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-/* === Skill Group Box === */
+/* === Skill Card Grouping === */
 .skill-category {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
   padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
@@ -109,30 +79,66 @@
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #111827;
-  border-left: 4px solid #2563eb;
+  border-left: 4px solid;
   padding-left: 0.75rem;
 }
 
-/* === Skill List === */
-.skill-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* === Light Theme === */
+body[data-theme="light"] .about-container {
+  background-color: #f9fafb;
+  color: #1f2937;
 }
 
-.skill-list li {
+body[data-theme="light"] .resume-button {
+  background-color: #2563eb;
+  color: white;
+}
+
+body[data-theme="light"] .skill-category {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+body[data-theme="light"] .skill-category h3 {
+  color: #111827;
+  border-color: #2563eb;
+}
+
+body[data-theme="light"] .skill-list li {
   background-color: #f3f4f6;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
-  font-size: 0.95rem;
   color: #374151;
-  transition: background-color 0.2s ease;
 }
 
-.skill-list li:hover {
+body[data-theme="light"] .skill-list li:hover {
   background-color: #e0e7ff;
+}
+
+/* === Dark Theme === */
+body[data-theme="dark"] .about-container {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+body[data-theme="dark"] .resume-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+body[data-theme="dark"] .skill-category {
+  background-color: #111827;
+  border-color: #374151;
+}
+
+body[data-theme="dark"] .skill-category h3 {
+  color: #f9fafb;
+  border-color: #60a5fa;
+}
+
+body[data-theme="dark"] .skill-list li {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+body[data-theme="dark"] .skill-list li:hover {
+  background-color: #475569;
 }
