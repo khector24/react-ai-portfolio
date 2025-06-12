@@ -1,0 +1,70 @@
+/* === About Page Styles === */
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  line-height: 1.7;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.about-container p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+.about-container a {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Button */
+.resume-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.resume-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-top: 3rem;
+}
+
+.skills-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: #374151;
+}
