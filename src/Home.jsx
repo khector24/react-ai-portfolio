@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import profilePic from "./assets/profile-pic.jpeg";
-import "./App.css";
+import "./Home.css";
 import resumePDF from "./assets/Best Resume - KFH.pdf";
 
 export default function Home() {

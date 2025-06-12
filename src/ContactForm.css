@@ -1,3 +1,4 @@
+/* === Contact Form === */
 .contact-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -29,5 +30,33 @@
 }
 
 .contact-form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* === Dark Mode === */
+body[data-theme="dark"] .contact-form {
+  background-color: #111827;
+  border: 1px solid #374151;
+  color: #f9fafb;
+}
+
+body[data-theme="dark"] .contact-form input,
+body[data-theme="dark"] .contact-form textarea {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+}
+
+body[data-theme="dark"] .contact-form input::placeholder,
+body[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+body[data-theme="dark"] .contact-form button {
+  background-color: #2563eb;
+  color: white;
+}
+
+body[data-theme="dark"] .contact-form button:hover {
   background-color: #1d4ed8;
 }
