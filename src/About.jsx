@@ -1,7 +1,7 @@
 import resumePDF from "./assets/Best Resume - KFH.pdf";
 import "./About.css";
 import Accordion from "./Accordion"; // Assuming you have an Accordion component
-import faqs from "./assets/faqs";
+import { faqs } from "./assets/content.js";
 
 export default function About() {
   return (

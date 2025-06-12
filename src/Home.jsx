@@ -61,10 +61,6 @@ export default function Home() {
           <p className="zen-joke">{zenQuote}</p>
         </div>
       </section>
-
-      <section className="home-hero-quote">
-        <p>"The best way to predict the future is to invent it." - Alan Kay</p>
-      </section>
     </main>
   );
 }
