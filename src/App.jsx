@@ -7,21 +7,23 @@ import Testimonials from "./Testimonials";
 import About from "./About"; // NEW
 import ContactForm from "./ContactForm";
 import "./App.css";
+import ThemeProvider from "./ThemeContext";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} /> {/* Home route */}
-        <Route path="/portfolio" element={<Portfolio />} />{" "}
-        {/* Portfolio moved */}
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<ContactForm />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactForm />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 
