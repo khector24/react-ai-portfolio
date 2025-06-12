@@ -7,27 +7,45 @@ export default function About() {
       <h2>About Me</h2>
       <p>
         Hi, I'm <strong>Kenny Hector</strong>, a multilingual full-stack
-        developer from Haiti with a passion for clean, scalable, and
-        user-focused web applications. I graduated from Saint Thomas Aquinas
-        College with a Bachelor’s in Computer Science. I speak three languages
-        and take pride in blending creativity with performance in every project
-        I touch.
+        developer from Haiti with a passion for building clean, scalable, and
+        user-centered web applications. I hold a Bachelor’s in Computer Science
+        from Saint Thomas Aquinas College and speak three languages. My work
+        blends creativity, performance, and problem-solving.
       </p>
+
       <p>
-        My experience spans building internal systems for hardware stores to
-        deploying scalable cloud apps for client engagement. I'm AWS certified
-        and fluent in React, Node.js, and automation tooling—equipped for both
-        frontend finesse and backend logic.
+        I’m AWS Certified and have built real-world systems for both businesses
+        and clients. While working at Rainbow Ace Hardware, I led a team of 25+
+        and developed internal applications using JavaFX and MySQL, improving
+        inventory accuracy and streamlining in-store logistics. My technical
+        solutions helped cut checkout times by 47% and eliminated repeated
+        manual processes.
       </p>
+
       <p>
-        When I'm not coding, you can find me exploring new tech trends, hiking,
-        or enjoying a good book. I believe in continuous learning and am always
-        looking for ways to improve my skills and contribute to exciting
-        projects.
+        On the client side, I designed and deployed responsive websites like the{" "}
+        <strong>Splash Zone Aquatics</strong> platform using React, Material UI,
+        AWS Lambda, and DynamoDB—resulting in 13 early client signups. I've also
+        built cloud-first applications for theft reporting and delivery tracking
+        using secure AWS services, JWT authentication, and real-time updates.
       </p>
+
       <p>
-        Let's connect and build something amazing together! Feel free to reach
-        out via email at:{" "}
+        I’m experienced with RESTful APIs, automation tools, and secure system
+        design, and I always prioritize maintainability and performance. My
+        projects often involve tight integration between frontend UI and backend
+        logic to create seamless, reliable systems.
+      </p>
+
+      <p>
+        When I’m not coding, I enjoy hiking, reading, and diving into new tech
+        trends. I value continuous learning and am always seeking to grow,
+        collaborate, and build meaningful solutions.
+      </p>
+
+      <p>
+        Let's connect and build something impactful together! Feel free to reach
+        out at{" "}
         <a href="mailto:kennyhector24@gmail.com">kennyhector24@gmail.com</a>
       </p>
 
@@ -35,20 +53,55 @@ export default function About() {
         Download Resume (PDF)
       </a>
 
-      <section className="skills-section">
-        <h2>Skills</h2>
-        <ul className="skills-list">
-          <li>React (Hooks, Router, Vite)</li>
-          <li>Node.js & Express</li>
-          <li>AWS (Lambda, DynamoDB, S3, SES)</li>
-          <li>API Development & Integration</li>
-          <li>Python (Scripting, Automation)</li>
-          <li>MongoDB & SQL</li>
-          <li>HTML5 & CSS3</li>
-          <li>Responsive Design & Flexbox/Grid</li>
-          <li>Git & GitHub (Branching, Merging)</li>
-          <li>Agile Collaboration</li>
+      <section className="achievements-section">
+        <h2>Key Achievements</h2>
+        <ul className="achievements-list">
+          <li>
+            🚀 Boosted early client engagement by building the Splash Zone
+            Aquatics platform — resulting in 13 newsletter signups before
+            launch.
+          </li>
+          <li>
+            🛠️ Developed a delivery management system that reduced order errors
+            and improved tracking — cutting delivery creation time by 38%.
+          </li>
+          <li>
+            🔐 Implemented theft tracking software with secure AWS integration,
+            speeding up reporting by 33% and improving file-based evidence
+            handling.
+          </li>
+          <li>
+            🧾 Streamlined POS operations by designing a code/image-saving
+            module, reducing repeat inventory checks and checkout time by 47%.
+          </li>
         </ul>
+      </section>
+
+      <section className="skills-section">
+        <div className="skill-category">
+          <h3>Technical Skills</h3>
+          <ul className="skill-list">
+            <li>React (Hooks, Router, Vite)</li>
+            <li>Node.js & Express</li>
+            <li>AWS (Lambda, DynamoDB, S3, SES)</li>
+            <li>API Development & Integration</li>
+            <li>MongoDB & SQL</li>
+            <li>HTML5 & CSS3</li>
+            <li>Responsive Design & Flexbox/Grid</li>
+            <li>Git & GitHub (Branching, Merging)</li>
+          </ul>
+        </div>
+
+        <div className="skill-category">
+          <h3>Leadership & Business Skills</h3>
+          <ul className="skill-list">
+            <li>Team Leadership (25+ staff)</li>
+            <li>Client Communication</li>
+            <li>Technical Troubleshooting</li>
+            <li>Retail Operations Optimization</li>
+            <li>Project Management & Delivery</li>
+          </ul>
+        </div>
       </section>
     </main>
   );
