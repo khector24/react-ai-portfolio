@@ -25,50 +25,35 @@
 .about-container a {
   color: #2563eb;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .about-container a:hover {
   text-decoration: underline;
 }
 
-/* Resume Button */
+/* === Resume Button === */
 .resume-button {
   display: inline-block;
-  margin-top: 1.5rem;
+  margin: 2rem 0;
   background-color: #2563eb;
-  color: white;
-  padding: 0.75rem 1.25rem;
+  color: white !important;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 600;
   border-radius: 0.5rem;
   text-decoration: none;
   transition: background-color 0.2s ease;
+  text-align: center;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .resume-button:hover {
   background-color: #1d4ed8;
 }
 
-/* Skills Section */
-.skills-section {
-  margin-top: 3rem;
-}
-
-.skills-section h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #111827;
-}
-
-.skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem;
-  list-style-type: disc;
-  padding-left: 1.25rem;
-  color: #374151;
-}
-
+/* === Achievements Section === */
 .achievements-section {
   margin-top: 3rem;
 }
@@ -89,9 +74,10 @@
 
 .achievements-list li {
   margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
   position: relative;
   font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .achievements-list li::before {
@@ -99,9 +85,10 @@
   color: #2563eb;
   position: absolute;
   left: 0;
+  font-weight: bold;
 }
 
-/* === Refined Skills Layout === */
+/* === Skills Section Layout === */
 .skills-section {
   margin-top: 3rem;
   display: flex;
@@ -109,7 +96,7 @@
   gap: 3rem;
 }
 
-/* Skill Group Containers */
+/* === Skill Group Box === */
 .skill-category {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -127,7 +114,7 @@
   padding-left: 0.75rem;
 }
 
-/* Skill List Styling */
+/* === Skill List === */
 .skill-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -148,33 +135,4 @@
 
 .skill-list li:hover {
   background-color: #e0e7ff;
-}
-
-.about-container a {
-  color: #2563eb;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.about-container a:hover {
-  text-decoration: underline;
-}
-
-/* Resume Button */
-.resume-button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background-color: #2563eb;
-  color: white !important; /* <--- force white text */
-  font-size: 1rem; /* <--- explicitly define size */
-  padding: 0.75rem 1.25rem;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-  text-align: center;
-}
-
-.resume-button:hover {
-  background-color: #1d4ed8;
 }
