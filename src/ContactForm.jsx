@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ContactForm.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -7,6 +9,10 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,9 +25,9 @@ export default function ContactForm() {
   };
 
   return (
-    <main>
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
+    <main className="contact-container">
+      <h2 data-aos="fade-down">Contact Me</h2>
+      <form onSubmit={handleSubmit} className="contact-form" data-aos="zoom-in">
         <input
           type="text"
           name="name"
@@ -43,6 +49,7 @@ export default function ContactForm() {
           placeholder="Your message"
           onChange={handleChange}
           value={formData.message}
+          rows="6"
           required
         />
         <button type="submit">Send</button>
