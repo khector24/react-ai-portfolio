@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import profilePic from "./assets/profile-pic.jpeg";
 import "./Home.css";
 import resumePDF from "./assets/Best Resume - KFH.pdf";
@@ -33,12 +35,13 @@ export default function Home() {
       }
     }
 
+    AOS.init({ duration: 1000, once: true });
     fetchZenQuote();
   }, []);
 
   return (
     <main className="home-hero">
-      <section className="home-hero-content">
+      <section className="home-hero-content" data-aos="fade-up">
         <img src={profilePic} alt="Kenny Hector" className="profile-pic" />
         <div className="intro-text">
           <h2 className="hero-intro">Welcome,</h2>
@@ -72,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="what-i-do-section">
+      <section className="what-i-do-section" data-aos="fade-right">
         <div className="what-i-do">
           <h2>What I Do</h2>
           <p>
@@ -85,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="tech-logos-section">
+      <section className="tech-logos-section" data-aos="fade-left">
         <div className="tech-logos">
           <h2>Tech I Use</h2>
           <div className="logo-grid">
