@@ -1,6 +1,7 @@
 import React from "react";
-import "./Testimonials.css"; // Assuming you have a CSS file for styling
-
+import "./Testimonials.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Testimonials() {
   return (
     <main>
