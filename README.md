@@ -30,7 +30,7 @@ npm install
 npm run dev
 ```
 
-Folder Structur
+## 📂 Folder Structure
 
 ```bash
 src/
@@ -40,4 +40,13 @@ src/
 ├── styles/           # CSS files
 ├── ThemeContext.js   # Dark mode logic
 └── App.jsx           # Main routing setup
+```
+
+## 🔍 Upcoming Enhancements
+
+```bash
+- AOS animations for scroll-based transitions
+- SVG curve section dividers
+- Testimonials carousel
+- Blog/articles section
 ```
