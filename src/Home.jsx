@@ -4,8 +4,6 @@ import axios from "axios";
 import profilePic from "./assets/profile-pic.jpeg";
 import "./Home.css";
 import resumePDF from "./assets/Best Resume - KFH.pdf";
-
-//
 import reactLogo from "./assets/logos/react.svg";
 import nodeLogo from "./assets/logos/nodejs.svg";
 import awsLogo from "./assets/logos/aws.svg";
@@ -42,6 +40,7 @@ export default function Home() {
       <section className="home-hero-content">
         <img src={profilePic} alt="Kenny Hector" className="profile-pic" />
         <div className="intro-text">
+          <h2 className="hero-intro">Welcome,</h2>
           <h1 className="name-heading">Kenny F. Hector</h1>
           <p className="subtitle">
             Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB

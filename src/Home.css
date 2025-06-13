@@ -7,7 +7,8 @@ main.home-hero {
   min-height: 100vh;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
+  row-gap: 4rem;
 }
 
 .home-hero-content {
@@ -53,6 +54,7 @@ main.home-hero {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .cta-button {
@@ -72,6 +74,15 @@ main.home-hero {
 .zen-joke {
   font-style: italic;
   color: #64748b;
+  margin-top: 0.75rem;
+}
+
+.hero-intro {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Responsive layout for hero */
@@ -89,10 +100,19 @@ main.home-hero {
   .intro-text {
     align-items: center;
   }
+
+  .home-buttons {
+    justify-content: center;
+  }
+}
+
+section + section::before {
+  content: "";
+  display: block;
+  height: 2rem;
 }
 
 /* === Theming === */
-
 body[data-theme="dark"] .subtitle,
 body[data-theme="dark"] .zen-joke {
   color: #cbd5e1;
@@ -107,11 +127,13 @@ body[data-theme="dark"] .cta-button:hover {
   background-color: #2563eb;
 }
 
-.what-i-do,
-.tech-logos {
-  margin-top: 3rem;
+/* === "What I Do" Section === */
+.what-i-do {
+  margin-top: 4rem;
+  padding: 3rem 1rem;
   text-align: center;
-  padding: 0 1rem;
+  background-color: #f1f5f9;
+  border-radius: 0.75rem;
 }
 
 .what-i-do p {
@@ -119,6 +141,15 @@ body[data-theme="dark"] .cta-button:hover {
   color: #4b5563;
   max-width: 700px;
   margin: 0 auto;
+}
+
+/* === Tech Logos Section === */
+.tech-logos {
+  margin-top: 0;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #e2e8f0;
+  border-radius: 0.75rem;
 }
 
 .tech-logos .logo-grid {
@@ -130,16 +161,35 @@ body[data-theme="dark"] .cta-button:hover {
 }
 
 .tech-logos img {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  transition: transform 0.2s ease, filter 0.3s ease;
 }
 
 .tech-logos img:hover {
+  transform: scale(1.1);
   filter: none;
+}
+
+/* === Dark Theme Support === */
+body[data-theme="dark"] .what-i-do {
+  background-color: #1f2937;
+}
+
+body[data-theme="dark"] .tech-logos {
+  background-color: #111827;
 }
 
 body[data-theme="dark"] .what-i-do p {
   color: #cbd5e1;
+}
+
+body[data-theme="dark"] .tech-logos img {
+  background-color: #1f2937;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
 }
