@@ -50,3 +50,5 @@ src/
 - Testimonials carousel
 - Blog/articles section
 ```
+
+### Built with 💻 by Kenny Hector – AWS Certified Solutions Architect & Full-Stack Developer
