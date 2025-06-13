@@ -75,9 +75,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SVG WAVE */}
+      <div className="wave-divider">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,128C672,128,768,96,864,85.3C960,75,1056,85,1152,85.3C1248,85,1344,75,1392,69.3L1440,64V0H0Z"
+          ></path>
+        </svg>
+      </div>
+
       <section className="what-i-do-section" data-aos="fade-right">
         <div className="what-i-do">
-          <h2>What I Do</h2>
+          <h2 className="section-heading">What I Do</h2>
           <p>
             I build fast, scalable, and secure web applications — from
             responsive front-end interfaces with React to AWS-backed cloud
@@ -88,9 +102,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SVG WAVE */}
+      <div className="wave-divider flipped">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="currentColor"
+            d="M0,96L48,90.7C96,85,192,75,288,85.3C384,96,480,128,576,128C672,128,768,96,864,85.3C960,75,1056,85,1152,85.3C1248,85,1344,75,1392,69.3L1440,64V0H0Z"
+          ></path>
+        </svg>
+      </div>
+
       <section className="tech-logos-section" data-aos="fade-left">
         <div className="tech-logos">
-          <h2>Tech I Use</h2>
+          <h2 className="section-heading">Tech I Use</h2>
           <div className="logo-grid">
             <img src={reactLogo} alt="React" />
             <img src={nodeLogo} alt="Node.js" />
