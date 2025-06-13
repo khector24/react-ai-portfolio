@@ -45,7 +45,7 @@ export default function Home() {
         <img src={profilePic} alt="Kenny Hector" className="profile-pic" />
         <div className="intro-text">
           <h2 className="hero-intro">Welcome,</h2>
-          <h1 className="name-heading">Kenny F. Hector</h1>
+          <h1 className="name-heading typewriter">Kenny F. Hector</h1>
           <p className="subtitle">
             Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB
           </p>
