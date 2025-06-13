@@ -1,27 +1,40 @@
-/* === About Page Container === */
+/* === About Page Layout === */
 .about-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1rem;
-  line-height: 1.7;
+  padding: 4rem 1rem;
+  line-height: 1.8;
 }
 
+/* === Section Titles === */
 .about-container h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
+.about-container h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #2563eb;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+}
+
+/* === Paragraphs === */
 .about-container p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   font-size: 1.05rem;
 }
 
 .about-container a {
   font-weight: 500;
+  color: #2563eb;
   text-decoration: none;
 }
-
 .about-container a:hover {
   text-decoration: underline;
 }
@@ -29,118 +42,75 @@
 /* === Resume Button === */
 .resume-button {
   display: inline-block;
-  margin-top: 1.5rem;
+  margin: 2rem 0;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
+  background-color: #2563eb;
+  color: white;
   transition: background-color 0.2s ease;
-  text-align: center;
+}
+.resume-button:hover {
+  background-color: #1d4ed8;
 }
 
-/* === Achievements & Skills Sections === */
-.skills-section,
-.achievements-section {
-  margin-top: 3rem;
+/* === Divider between sections === */
+.about-container section {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
 }
 
-.achievements-list,
-.skill-list {
+/* === Achievements List === */
+.achievements-list {
   list-style: none;
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
 }
 
 .achievements-list li {
-  position: relative;
-  padding-left: 1.5rem;
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.5rem;
   font-size: 1.05rem;
-}
-
-.achievements-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
 }
 
 /* === Skill Cards === */
 .skill-category {
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 0.75rem;
-  border: 1px solid;
+  border: 1px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  margin-bottom: 2rem;
 }
 
 .skill-category h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  border-left: 4px solid;
+  border-left: 4px solid #2563eb;
   padding-left: 0.75rem;
 }
 
-/* === Theme: Light === */
-body[data-theme="light"] .about-container {
-  background-color: #f9fafb;
-  color: #1f2937;
+.skill-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
 }
-
-body[data-theme="light"] .resume-button {
-  background-color: #2563eb;
-  color: white;
-}
-
-body[data-theme="light"] .skill-category {
-  background-color: #ffffff;
-  border-color: #e5e7eb;
-}
-
-body[data-theme="light"] .skill-category h3 {
-  color: #111827;
-  border-color: #2563eb;
-}
-
-body[data-theme="light"] .skill-list li {
+.skill-list li {
   background-color: #f3f4f6;
-  color: #374151;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.95rem;
 }
 
-body[data-theme="light"] .skill-list li:hover {
-  background-color: #e0e7ff;
-}
-
-/* === Theme: Dark === */
-body[data-theme="dark"] .about-container {
-  background-color: #1f2937;
-  color: #f9fafb;
-}
-
-body[data-theme="dark"] .resume-button {
-  background-color: #3b82f6;
-  color: white;
-}
-
-body[data-theme="dark"] .skill-category {
-  background-color: #111827;
-  border-color: #374151;
-}
-
-body[data-theme="dark"] .skill-category h3 {
-  color: #f9fafb;
-  border-color: #60a5fa;
-}
-
-body[data-theme="dark"] .skill-list li {
-  background-color: #374151;
-  color: #e5e7eb;
-}
-
-body[data-theme="dark"] .skill-list li:hover {
-  background-color: #475569;
-}
-
+/* === FAQ Accordion (already styled earlier) === */
 /* === FAQ Accordion === */
 .faq-section {
   margin-top: 3rem;
@@ -173,6 +143,31 @@ body[data-theme="dark"] .skill-list li:hover {
   font-size: 0.95rem;
   color: #374151;
   background-color: #f9fafb;
+}
+
+/* === Dark Mode === */
+body[data-theme="dark"] .about-container {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+body[data-theme="dark"] .resume-button {
+  background-color: #3b82f6;
+}
+body[data-theme="dark"] .resume-button:hover {
+  background-color: #2563eb;
+}
+body[data-theme="dark"] .achievements-list li {
+  background-color: #374151;
+}
+body[data-theme="dark"] .skill-category {
+  background-color: #111827;
+  border-color: #374151;
+}
+body[data-theme="dark"] .skill-category h3 {
+  border-color: #60a5fa;
+}
+body[data-theme="dark"] .skill-list li {
+  background-color: #374151;
 }
 
 /* === Dark Theme Accordion === */
