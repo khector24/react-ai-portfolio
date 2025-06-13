@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import Typewriter from "typewriter-effect";
 import profilePic from "./assets/profile-pic.jpeg";
 import "./Home.css";
 import resumePDF from "./assets/Best Resume - KFH.pdf";
@@ -45,7 +47,20 @@ export default function Home() {
         <img src={profilePic} alt="Kenny Hector" className="profile-pic" />
         <div className="intro-text">
           <h2 className="hero-intro">Welcome,</h2>
-          <h1 className="name-heading typewriter">Kenny F. Hector</h1>
+          <h1 className="name-heading">
+            Hi!, I'm{" "}
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Kenny Hector").start();
+              }}
+              options={{
+                autoStart: true,
+                loop: false,
+                delay: 75,
+                cursor: "|", // Optional: customize the cursor
+              }}
+            />
+          </h1>
           <p className="subtitle">
             Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB
           </p>
