@@ -1,23 +1,23 @@
-/* === Home Page === */
-
+/* === Home Page Layout === */
 main.home-hero {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  gap: 4rem;
   max-width: 1024px;
   margin: 0 auto;
   padding: 4rem 1rem;
-  row-gap: 4rem;
 }
 
+/* === Hero Section === */
 .home-hero-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
   flex-wrap: wrap;
-  flex: 1;
+  gap: 2rem;
+  background-color: #f9fafb;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .profile-pic {
@@ -32,6 +32,15 @@ main.home-hero {
 .intro-text {
   flex: 1;
   min-width: 260px;
+}
+
+.hero-intro {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .name-heading {
@@ -52,9 +61,9 @@ main.home-hero {
 
 .home-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 1rem;
-  flex-wrap: wrap;
 }
 
 .cta-button {
@@ -77,15 +86,66 @@ main.home-hero {
   margin-top: 0.75rem;
 }
 
-.hero-intro {
-  font-size: 1rem;
-  color: #6b7280;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+/* === "What I Do" Section === */
+.what-i-do-section {
+  padding-top: 2rem;
 }
 
-/* Responsive layout for hero */
+.what-i-do {
+  text-align: center;
+  background-color: #f1f5f9;
+  padding: 3rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.what-i-do p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Tech Logos Section === */
+.tech-logos-section {
+  padding-top: 2rem;
+}
+
+.tech-logos {
+  text-align: center;
+  background-color: #e2e8f0;
+  padding: 3rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-logos .logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.tech-logos img {
+  width: 64px;
+  height: 64px;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  filter: grayscale(100%);
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+.tech-logos img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
   .home-hero-content {
     flex-direction: column;
@@ -104,15 +164,13 @@ main.home-hero {
   .home-buttons {
     justify-content: center;
   }
+
+  .profile-pic {
+    margin-top: 1rem;
+  }
 }
 
-section + section::before {
-  content: "";
-  display: block;
-  height: 2rem;
-}
-
-/* === Theming === */
+/* === Theming: Dark Mode === */
 body[data-theme="dark"] .subtitle,
 body[data-theme="dark"] .zen-joke {
   color: #cbd5e1;
@@ -120,63 +178,12 @@ body[data-theme="dark"] .zen-joke {
 
 body[data-theme="dark"] .cta-button {
   background-color: #3b82f6;
-  color: white;
 }
 
 body[data-theme="dark"] .cta-button:hover {
   background-color: #2563eb;
 }
 
-/* === "What I Do" Section === */
-.what-i-do {
-  margin-top: 4rem;
-  padding: 3rem 1rem;
-  text-align: center;
-  background-color: #f1f5f9;
-  border-radius: 0.75rem;
-}
-
-.what-i-do p {
-  font-size: 1.1rem;
-  color: #4b5563;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* === Tech Logos Section === */
-.tech-logos {
-  margin-top: 0;
-  padding: 3rem 1rem;
-  text-align: center;
-  background-color: #e2e8f0;
-  border-radius: 0.75rem;
-}
-
-.tech-logos .logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.tech-logos img {
-  width: 56px;
-  height: 56px;
-  padding: 0.5rem;
-  background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  filter: grayscale(100%);
-  transition: transform 0.2s ease, filter 0.3s ease;
-}
-
-.tech-logos img:hover {
-  transform: scale(1.1);
-  filter: none;
-}
-
-/* === Dark Theme Support === */
 body[data-theme="dark"] .what-i-do {
   background-color: #1f2937;
 }

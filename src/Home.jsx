@@ -4,6 +4,7 @@ import axios from "axios";
 import profilePic from "./assets/profile-pic.jpeg";
 import "./Home.css";
 import resumePDF from "./assets/Best Resume - KFH.pdf";
+
 import reactLogo from "./assets/logos/react.svg";
 import nodeLogo from "./assets/logos/nodejs.svg";
 import awsLogo from "./assets/logos/aws.svg";
@@ -67,32 +68,37 @@ export default function Home() {
               Download Resume
             </a>
           </div>
-
           <p className="zen-joke">{zenQuote}</p>
         </div>
       </section>
-      <section className="what-i-do">
-        <h2>What I Do</h2>
-        <p>
-          I build fast, scalable, and secure web applications — from responsive
-          front-end interfaces with React to AWS-backed cloud solutions. Whether
-          it's automating internal tools or launching client-facing platforms, I
-          deliver full-stack solutions that solve real problems.
-        </p>
+
+      <section className="what-i-do-section">
+        <div className="what-i-do">
+          <h2>What I Do</h2>
+          <p>
+            I build fast, scalable, and secure web applications — from
+            responsive front-end interfaces with React to AWS-backed cloud
+            solutions. Whether it's automating internal tools or launching
+            client-facing platforms, I deliver full-stack solutions that solve
+            real problems.
+          </p>
+        </div>
       </section>
 
-      <section className="tech-logos">
-        <h2>Tech I Use</h2>
-        <div className="logo-grid">
-          <img src={reactLogo} alt="React" />
-          <img src={nodeLogo} alt="Node.js" />
-          <img src={awsLogo} alt="AWS" />
-          <img src={javaLogo} alt="Java" />
-          <img src={mysqlLogo} alt="MySQL" />
-          <img src={htmlLogo} alt="HTML" />
-          <img src={cssLogo} alt="CSS" />
-          <img src={gitLogo} alt="Git" />
-          <img src={expressLogo} alt="Express.js" />
+      <section className="tech-logos-section">
+        <div className="tech-logos">
+          <h2>Tech I Use</h2>
+          <div className="logo-grid">
+            <img src={reactLogo} alt="React" />
+            <img src={nodeLogo} alt="Node.js" />
+            <img src={awsLogo} alt="AWS" />
+            <img src={javaLogo} alt="Java" />
+            <img src={mysqlLogo} alt="MySQL" />
+            <img src={htmlLogo} alt="HTML" />
+            <img src={cssLogo} alt="CSS" />
+            <img src={gitLogo} alt="Git" />
+            <img src={expressLogo} alt="Express.js" />
+          </div>
         </div>
       </section>
     </main>
