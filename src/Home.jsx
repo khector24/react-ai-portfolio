@@ -24,6 +24,8 @@ export default function Home() {
     "Zen mode: Activated. No bugs, only features."
   );
 
+  const [showTypewriter, setShowTypewriter] = useState(false);
+
   useEffect(() => {
     async function fetchZenQuote() {
       try {
@@ -38,6 +40,11 @@ export default function Home() {
     }
 
     AOS.init({ duration: 1000, once: true });
+
+    setTimeout(() => {
+      setShowTypewriter(true);
+    }, 1500); // match AOS delay
+
     fetchZenQuote();
   }, []);
 
@@ -48,19 +55,28 @@ export default function Home() {
         <div className="intro-text">
           <h2 className="hero-intro">Welcome,</h2>
           <h1 className="name-heading">
-            Hi!, I'm{" "}
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter.typeString("Kenny Hector").start();
-              }}
-              options={{
-                autoStart: true,
-                loop: false,
-                delay: 75,
-                cursor: "|", // Optional: customize the cursor
-              }}
-            />
+            I'm{" "}
+            <span className="name-placeholder">
+              {showTypewriter ? (
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter.typeString("Kenny").start();
+                  }}
+                  options={{
+                    autoStart: true,
+                    loop: false,
+                    delay: 75,
+                    cursor: "|",
+                  }}
+                />
+              ) : (
+                <span className="underline-placeholder">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              )}
+            </span>
           </h1>
+
           <p className="subtitle">
             Full-Stack Developer | AWS Certified | React | Node.js | DynamoDB
           </p>
